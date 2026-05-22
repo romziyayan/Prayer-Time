@@ -1,1 +1,55 @@
-<!DOCTYPE html><html>	<head>		<title>Jadwal Shalat</title>		<meta charset="UTF-8">		<meta name="viewport" content="width=device-width, initial-scale=1.0">		</meta>		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans">		<link rel="stylesheet" href="style.css">	</head>	<body onload="waktu(), getLocation(), tanggal()">		<h1>Jadwal Shalat</h1>		<h3 id="demo3" class="waktu"></h3>		<!-- <p id="demo4"></p> -->		<p id="demo1">Latitude :</p>		<p id="demo2">Longitude :</p>		<div class="box">			<table>				<tr>					<th>Jadwal</th>					<th>Waktu</th>				</tr>				<tr>					<td>Imsak</td>					<td><span id="imsak"></span></td>				</tr>				<tr>					<td>Subuh</td>					<td><span id="fajr"></span></td>				</tr>				<tr>					<td>Terbit</td>					<td><span id="sunrise"></span></td>				</tr>				<tr>					<td>Dzuhur</td>					<td><span id="dhuhr"></span></td>				</tr>				<tr>					<td>Ashar</td>					<td><span id="asr"></span></td>				</tr>				<tr>					<td>Maghrib</td>					<td><span id="maghrib"></span></td>				</tr>				<tr>					<td>Isya</td>					<td><span id="isha"></span></td>				</tr>			</table>		</div>		<script src="script.js"></script>	</body></html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Jadwal Shalat</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		</meta>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body onload="waktu(), getLocation(), tanggal()">
+		<h1>Jadwal Shalat</h1>
+		<h3 id="demo3" class="waktu"></h3>
+		<!-- <p id="demo4"></p> -->
+		<p id="demo1">Latitude :</p>
+		<p id="demo2">Longitude :</p>
+		<div class="box">
+			<table>
+				<tr>
+					<th>Jadwal</th>
+					<th>Waktu</th>
+				</tr>
+				<tr>
+					<td>Imsak</td>
+					<td><span id="imsak"></span></td>
+				</tr>
+				<tr>
+					<td>Subuh</td>
+					<td><span id="fajr"></span></td>
+				</tr>
+				<tr>
+					<td>Terbit</td>
+					<td><span id="sunrise"></span></td>
+				</tr>
+				<tr>
+					<td>Dzuhur</td>
+					<td><span id="dhuhr"></span></td>
+				</tr>
+				<tr>
+					<td>Ashar</td>
+					<td><span id="asr"></span></td>
+				</tr>
+				<tr>
+					<td>Maghrib</td>
+					<td><span id="maghrib"></span></td>
+				</tr>
+				<tr>
+					<td>Isya</td>
+					<td><span id="isha"></span></td>
+				</tr>
+			</table>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
