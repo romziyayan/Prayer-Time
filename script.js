@@ -1,5 +1,7 @@
 let lat = null
 let lon = null
+let map
+let marker
 const w = document.getElementById("demo4")
 const x = document.getElementById("demo1")
 const y = document.getElementById("demo2")
@@ -19,14 +21,17 @@ function getLocation() {
 			maximumAge: 0,
 			timeout: 5000
 		})
-	} else {
+	}
+	else {
 		alert("Geolocation is not supported by this browser.")
 	}
 }
 
 function success(position) {
-	let lat = position.coords.latitude
-	let lon = position.coords.longitude
+	const lat = position.coords.latitude
+	const lon = position.coords.longitude
+	const accu = position.coords.accuracy
+	console.log(accu)
 	let today = new Date()
 	let hari = today.getDate()
 	let bulan = today.getMonth() + 1
@@ -56,7 +61,7 @@ function success(position) {
 				e.innerHTML = jadwal.Maghrib
 				f.innerHTML = jadwal.Isha
 				g.innerHTML = jadwal.Sunrise
-				console.log(hijri)
+				//console.log(hijri)
 			}
 		})
 		.catch(function (error) {
@@ -66,6 +71,23 @@ function success(position) {
 	x.innerHTML = `Latitude : ${angka1}`
 	y.innerHTML = `Longitude : ${angka2}`
 	//console.log(`${lat}, ${lon}`)
+
+
+	let map = L.map('map').setView([lat, lon], 16);
+
+	L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(map);
+
+	let marker = L.marker([lat, lon]).addTo(map).bindPopup(`Akurasi ${accu} m`).closePopup();
+
+	let circle = L.circle([lat, lon], {
+		color: 'blue',
+		fillColor: 'blue',
+		fillOpacity: 0.25,
+		radius: accu
+	}).addTo(map);
 }
 
 function error() {
@@ -81,7 +103,8 @@ function toDMS(coord, isLat) {
 	let dir = ""
 	if (isLat) {
 		dir = coord >= 0 ? "N" : "S"
-	} else {
+	}
+	else {
 		dir = coord >= 0 ? "E" : "W"
 	}
 	return `${d}° ${m}' ${s}'' ${dir}`
