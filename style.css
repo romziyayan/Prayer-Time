@@ -11,11 +11,31 @@ table {
 	width: 100%;
 }
 
-th, td {
+th,
+td {
 	border: 1px solid white;
 	text-align: center;
 }
 
-h1, h3 {
+h1,
+h3 {
 	text-align: center;
+}
+
+#map {
+	aspect-ratio: 16 / 9;
+	border-radius: 1.5625vw;
+	width: 100%;
+}
+
+.leaflet-layer,
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+	filter: invert(100%) hue-rotate(180deg) brightness(100%) contrast(100%);
+}
+
+@media (max-width: 768px) {
+	#map {
+		aspect-ratio: 9 / 16;
+	}
 }
