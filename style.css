@@ -28,13 +28,11 @@ h3 {
 	width: 100%;
 }
 
-.leaflet-layer,
-.leaflet-control-zoom-in,
-.leaflet-control-zoom-out {
-	filter: invert(100%) hue-rotate(180deg) brightness(100%) contrast(100%);
-}
-
 @media (max-width: 768px) {
+	#map {
+		aspect-ratio: 9 / 16;
+	}
+}media (max-width: 768px) {
 	#map {
 		aspect-ratio: 9 / 16;
 	}
