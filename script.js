@@ -270,6 +270,3 @@ function tanggal() {
 	let tanggal = `Tanggal : ${hari}-${bulan}-${tahun}`
 	w.innerHTML = tanggal
 }
-ahun}`
-	w.innerHTML = tanggal
-}
