@@ -32,8 +32,4 @@ h3 {
 	#map {
 		aspect-ratio: 9 / 16;
 	}
-}media (max-width: 768px) {
-	#map {
-		aspect-ratio: 9 / 16;
-	}
 }
