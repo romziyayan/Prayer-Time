@@ -1,0 +1,35 @@
+html {
+	background: black;
+	color: white;
+	font-family: Noto Sans, sans-serif;
+	font-size: 1em;
+	padding: 0 1em;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th,
+td {
+	border: 1px solid white;
+	text-align: center;
+}
+
+h1,
+h3 {
+	text-align: center;
+}
+
+#map {
+	aspect-ratio: 16 / 9;
+	border-radius: 1.5625vw;
+	width: 100%;
+}
+
+@media (max-width: 768px) {
+	#map {
+		aspect-ratio: 9 / 16;
+	}
+}
