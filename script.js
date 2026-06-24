@@ -42,7 +42,7 @@ function success(position) {
 	console.log(`${lat}, ${lon}​`)
 	let angka1 = toDMS(lat, true)
 	let angka2 = toDMS(lon, false)
-	const url = `https://api.aladhan.com/v1/timings/${tanggal}?latitude=${lat}&longitude=${lon}&method=99&methodSettings=18,,18&tune=2,2,-2,3,2,2,0,2,0`
+	const url = `https://api.aladhan.com/v1/timings/${tanggal}?latitude=${lat}&longitude=${lon}&method=99&methodSettings=18,1,18&tune=2,2,-2,3,2,2,0,2,0`
 	console.log(url)
 	fetch(url)
 		.then(function (response) {
